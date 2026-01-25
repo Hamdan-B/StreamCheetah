@@ -1,0 +1,181 @@
+/* Stream Chat Theme Styling */
+
+.str-chat {
+  --str-chat__primary-color: hsl(var(--primary) / 1);
+  --str-chat__secondary-color: hsl(var(--secondary) / 1);
+  --str-chat__background: hsl(var(--background) / 1);
+  --str-chat__surface: hsl(var(--muted) / 1);
+  --str-chat__text-color: hsl(var(--foreground) / 1);
+  --str-chat__text-color-muted: hsl(var(--muted-foreground) / 1);
+  --str-chat__border-color: hsl(var(--muted) / 1);
+  font-family: inherit;
+  background-color: hsl(var(--muted) / 0.3);
+  color: hsl(var(--foreground) / 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Channel Header */
+.str-chat__header {
+  background-color: hsl(var(--muted) / 0.5);
+  border-bottom: 1px solid hsl(var(--muted) / 1);
+  color: hsl(var(--foreground) / 1);
+}
+
+.str-chat__header-title {
+  color: hsl(var(--foreground) / 1);
+  font-weight: 600;
+}
+
+/* Message List */
+.str-chat__list {
+  background-color: transparent;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.str-chat__message-list {
+  padding: 1rem;
+  background-color: transparent;
+}
+
+/* Messages */
+.str-chat__message {
+  color: hsl(var(--foreground) / 1);
+}
+
+.str-chat__message-text {
+  background-color: hsl(var(--muted) / 1);
+  color: hsl(var(--foreground) / 1);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.str-chat__message--me .str-chat__message-text {
+  background-color: hsl(var(--primary) / 1);
+  color: hsl(var(--primary-foreground) / 1);
+}
+
+.str-chat__message-author {
+  color: hsl(var(--foreground) / 1);
+  font-weight: 600;
+}
+
+.str-chat__message-author--name-muted {
+  color: hsl(var(--muted-foreground) / 1);
+}
+
+/* Input Area Fixes */
+.str-chat__message-input {
+  background-color: hsl(var(--muted) / 0.3) !important;
+  padding: 1rem;
+  border-top: 1px solid hsl(var(--muted) / 1);
+}
+
+/* This is the class that is likely staying white */
+.str-chat__message-input-inner {
+  background-color: hsl(var(--background) / 1) !important;
+  border: 1px solid hsl(var(--muted) / 1) !important;
+  border-radius: 0.5rem !important;
+  color: hsl(var(--foreground) / 1) !important;
+}
+
+.str-chat__textarea textarea {
+  background-color: transparent !important;
+  color: hsl(var(--foreground) / 1) !important;
+  padding: 0.5rem !important;
+}
+
+.str-chat__textarea textarea::placeholder {
+  color: hsl(var(--muted-foreground) / 0.7) !important;
+}
+
+/* Input Footer (Icons/Buttons container) */
+.str-chat__input-footer {
+  background-color: transparent !important;
+  border-top: none !important;
+  padding: 0 !important;
+}
+
+/* Fix for icons (plus and send) color */
+.str-chat__message-input-buttons svg,
+.str-chat__fileupload-button svg {
+  fill: hsl(var(--muted-foreground) / 1) !important;
+}
+
+/* Focus states */
+.str-chat__message-input-inner:focus-within {
+  border-color: hsl(var(--primary) / 1) !important;
+  box-shadow: 0 0 0 2px hsl(var(--primary) / 0.1) !important;
+}
+
+/* Input field overrides for various versions */
+.str-chat__textarea,
+.str-chat__input-footer input,
+.str-chat__input-flat input {
+  background-color: transparent !important;
+  color: hsl(var(--foreground) / 1) !important;
+}
+
+/* Force message input background wrapper */
+.str-chat__message-input-wrapper {
+  background-color: transparent !important;
+}
+
+/* Buttons */
+.str-chat__button {
+  background-color: hsl(var(--primary) / 1);
+  color: hsl(var(--primary-foreground) / 1);
+  border: none;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+}
+
+.str-chat__button:hover {
+  background-color: hsl(var(--primary) / 0.9);
+}
+
+/* Send button */
+.str-chat__send-button {
+  background-color: transparent !important;
+  color: hsl(var(--primary) / 1) !important;
+}
+
+.str-chat__send-button:hover {
+  opacity: 0.8;
+}
+
+/* Scrollbar */
+.str-chat__list::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.str-chat__list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.str-chat__list::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--muted) / 1);
+  border-radius: 0.25rem;
+}
+
+.str-chat__list::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--muted-foreground) / 1);
+}
+
+/* Avatar */
+.str-chat__avatar {
+  border-radius: 9999px;
+}
+
+/* Reactions */
+.str-chat__reaction {
+  background-color: hsl(var(--muted) / 1);
+  color: hsl(var(--foreground) / 1);
+}
+
+/* Loading indicator */
+.str-chat__message-loading {
+  color: hsl(var(--muted-foreground) / 1);
+}
