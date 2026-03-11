@@ -1,3 +1,6 @@
+##About
+A preconfigured streaming site project.
+
 ## Quick setup
 
 1. Install deps
